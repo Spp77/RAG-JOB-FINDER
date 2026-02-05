@@ -1,0 +1,29 @@
+Job Title: Lead Data Scientist
+Company: Insight AI Solutions
+Location: Bangalore, India (Hybrid)
+Salary: ₹35,00,000 - ₹50,00,000 / year
+
+About Us:
+Insight AI is revolutionizing the fintech space by using predictive analytics to detect fraud and personalized financial planning.
+
+Role Overview:
+We are seeking a Lead Data Scientist to drive our ML initiatives. You will work on massive datasets to build models that process millions of transactions per second.
+
+Responsibilities:
+- Design, train, and deploy machine learning models for fraud detection and credit coring.
+- Lead a team of 4 data scientists and machine learning engineers.
+- Build end-to-end ML pipelines using Python, SQL, and AWS SageMaker.
+- Communicate findings to stakeholders through clear data visualization.
+- Stay updated with the latest in NLP and GenAI (LLMs).
+
+Required Skills:
+- 7+ years of experience in Data Science and ML.
+- Strong proficiency in Python (Pandas, Scikit-learn, PyTorch/TensorFlow).
+- Experience with Big Data technologies (Spark, Databricks).
+- Solid understanding of statistical modeling and deep learning.
+- Experience deploying models to production (MLOps, Docker, Kubernetes).
+- Master’s or PhD in Computer Science, Statistics, or related field.
+
+Nice to Have:
+- Experience with RAG and Fine-tuning LLMs (Llama 3, Mistral).
+- Experience in the Fintech domain.

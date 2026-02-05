@@ -1,0 +1,35 @@
+Sample Resume: Python and AWS Developer
+Resume: John Doe  
+Email: john.doe@example.com  
+Phone: +91-9876543210  
+
+Summary:
+Backend Developer with 2+ years of experience in building scalable REST APIs using Python, FastAPI, and Flask. Skilled in working with cloud platforms like AWS and Azure, and experienced with containerization using Docker and orchestration with Kubernetes. Passionate about clean code and optimized database queries.
+
+Technical Skills:
+- Languages: Python, JavaScript
+- Frameworks: FastAPI, Flask, Django
+- Databases: PostgreSQL, MongoDB
+- DevOps: Docker, Kubernetes, GitHub Actions
+- Cloud: AWS (EC2, Lambda), Azure
+- Tools: Postman, Swagger, VS Code
+
+Experience:
+Backend Developer | Cloudify Tech | Jan 2022 – Present  
+- Developed microservices in FastAPI to handle real-time user data.
+- Integrated PostgreSQL and optimized DB schema for performance.
+- Created Docker images for deployment in AWS ECS.
+- Collaborated with frontend team to implement API integrations.
+
+Education:
+B.E. in Computer Engineering | Pune University | 2021
+
+Certifications:
+- AWS Certified Cloud Practitioner
+- GitHub Actions for CI/CD – Coursera
+
+Projects:
+1. **Smart Resume Matcher** – Built an NLP-based job description parser and resume ranker using BERT.
+2. **Cloud Cost Tracker** – A Python-based app that tracks and optimizes AWS EC2 costs for startups.
+
+Experienced Python Developer with cloud and backend expertise.  

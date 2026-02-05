@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="search-container">
+    <div class="search-hero animate-fade">
+        <h1>Find Your Next Opportunity</h1>
+        <p style="color:var(--text-muted); font-size:1.1rem;">Powered by RAG & Semantic Analysis</p>
+    </div>
+
+    <!-- Search Input Area -->
+    <div class="animate-fade" style="animation-delay: 0.1s;">
+        <div class="big-search-box">
+            <textarea id="search-input"
+                placeholder="e.g. I need a senior deviation engineer role with AWS and Kubernetes experience, ideally remote..."></textarea>
+            <button id="search-btn" class="btn btn-primary">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </button>
+        </div>
+        <div id="loading" class="hidden" style="text-align:center; padding:2rem; color:var(--text-muted)">
+            <i class="fa-solid fa-circle-notch fa-spin fa-2x"></i>
+            <p style="margin-top:0.5rem">Processing millions of vectors...</p>
+        </div>
+    </div>
+
+    <!-- Results Area -->
+    <div id="results-area" class="hidden animate-fade" style="margin-top: 3rem; animation-delay: 0.2s;">
+
+        <!-- AI Answer Card -->
+        <div class="card ai-summary-card">
+            <div class="ai-summary-header">
+                <i class="fa-solid fa-robot"></i> AI Executive Summary
+            </div>
+            <div id="ai-response-text" class="markdown-content">
+                <!-- Content injected here -->
+            </div>
+        </div>
+
+        <!-- Source Documents Grid -->
+        <h3 style="margin-bottom:1.5rem; color:var(--text-main)">Supporting Evidence</h3>
+        <div id="sources-grid" class="source-grid">
+            <!-- Cards injected here -->
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/js/main.js"></script>
+{% endblock %}

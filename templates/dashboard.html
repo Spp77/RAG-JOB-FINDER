@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block app_content %}
+<div class="animate-fade">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+        <div>
+            <h1 style="font-size:2rem; margin-bottom:0.5rem">My Data</h1>
+            <p style="color:var(--text-muted)">Manage your resume and documents index</p>
+        </div>
+        {% if user.is_staff %}
+        <a href="{% url 'upload_document' %}" class="btn btn-primary">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Upload Data
+        </a>
+        {% endif %}
+    </div>
+
+    <!-- Stats Row (Optional Polish) -->
+    <div
+        style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem; margin-bottom:2rem;">
+        <div class="card">
+            <div style="color:var(--text-muted); font-size:0.9rem">Total Documents</div>
+            <div style="font-size:2rem; font-weight:700">{{ documents.count }}</div>
+        </div>
+        <div class="card">
+            <div style="color:var(--text-muted); font-size:0.9rem">Recent Searches</div>
+            <div style="font-size:2rem; font-weight:700">{{ history.count }}</div>
+        </div>
+    </div>
+
+    <div class="card" style="margin-bottom:2rem;">
+        <h3 style="margin-bottom:1.5rem">Uploaded Documents</h3>
+        {% if documents %}
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Filename</th>
+                    <th>Uploaded</th>
+                    {% if user.is_staff %}
+                    <th>Actions</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for doc in documents %}
+                <tr>
+                    <td>{{ doc.title }}</td>
+                    <td><i class="fa-regular fa-file-lines" style="margin-right:0.5rem"></i> {{ doc.filename }}</td>
+                    <td>{{ doc.uploaded_at|date:"M d, Y" }}</td>
+                    {% if user.is_staff %}
+                    <td>
+                        <a href="{% url 'delete_document' doc.id %}" class="btn btn-outline"
+                            style="padding:0.4rem 0.8rem; border-color:var(--danger); color:var(--danger)">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <div style="text-align:center; padding:3rem;">
+            <p style="color:var(--text-muted)">No documents found.{% if user.is_staff %} Upload one to get started!{%
+                endif %}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h3 style="margin-bottom:1.5rem">Recent Search History</h3>
+        {% if history %}
+        <div style="display:flex; flex-direction:column; gap:1rem;">
+            {% for item in history %}
+            <div style="padding-bottom:1rem; border-bottom:1px solid var(--border)">
+                <div style="display:flex; justify-content:space-between; margin-bottom:0.25rem;">
+                    <span style="font-weight:500">"{{ item.query }}"</span>
+                    <span style="color:var(--text-muted); font-size:0.8rem">{{ item.created_at|timesince }} ago</span>
+                </div>
+                <div
+                    style="color:var(--text-muted); font-size:0.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:800px;">
+                    Result: {{ item.result_summary }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p style="color:var(--text-muted)">No search history yet.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

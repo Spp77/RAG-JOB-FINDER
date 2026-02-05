@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Job Finder Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <div class="app-layout">
+        <!-- Sidebar for Authenticated Users -->
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-layer-group"></i> JobFinder
+            </div>
+
+            <nav class="nav-menu">
+                <a href="{% url 'search_page' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'search_page' %}active{% endif %}">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search Jobs
+                </a>
+                <a href="{% url 'dashboard' %}"
+                    class="nav-item {% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}">
+                    <i class="fa-solid fa-database"></i> My Data
+                </a>
+            </nav>
+
+            <div class="user-profile">
+                <div style="flex:1">
+                    <div style="font-weight:600">{{ user.username }}</div>
+                    <div style="font-size:0.8rem; color:var(--text-muted)">Pro Plan</div>
+                </div>
+                <a href="{% url 'logout' %}" title="Logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            {% block app_content %}{% endblock %}
+        </main>
+    </div>
+    {% else %}
+    <!-- Marketing Layout for Guests -->
+    <nav class="navbar" style="padding: 1.5rem 3rem; display:flex; justify-content:space-between; align-items:center;">
+        <div class="brand" style="margin:0"><i class="fa-solid fa-layer-group"></i> JobFinder</div>
+        <div style="display:flex; gap:1rem">
+            <a href="{% url 'login' %}" style="color:var(--text-main); font-weight:600;">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-primary"
+                style="padding:0.5rem 1.5rem; text-decoration:none;">Get Started</a>
+        </div>
+    </nav>
+    <div style="max-width:1200px; margin:0 auto; padding:2rem;">
+        {% block content %}{% endblock %}
+    </div>
+    {% endif %}
+</body>
+
+</html>

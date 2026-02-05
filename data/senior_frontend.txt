@@ -1,0 +1,29 @@
+Job Title: Senior Frontend Engineer (React/Next.js)
+Company: Creative Pixel Studios
+Location: Remote (US Timezone)
+Salary: $140,000 - $180,000 / year
+
+About Us:
+Creative Pixel Studios is a design-first technology company building the next generation of creative tools for digital artists. We value aesthetics, performance, and user experience above all else.
+
+Role Overview:
+We are looking for a Senior Frontend Engineer who obsesses over micro-interactions and pixel-perfect implementation. You will lead the frontend architecture of our flagship product "Canvas Pro".
+
+Responsibilities:
+- Architect and build scalable frontend applications using Next.js 14 and TypeScript.
+- Implement complex UI animations using Framer Motion and GSAP.
+- Optimize web performance (Core Web Vitals) ensuring 60fps animations.
+- Collaborate with designers to translate Figma prototypes into responsive, interactive code.
+- Write unit and integration tests using Jest and Cypress.
+- Mentor junior developers and conduct code reviews.
+
+Required Skills:
+- 5+ years of experience in frontend development.
+- Expert knowledge of Modern HTML, CSS (Tailwind/Modules), and JavaScript (ES6+).
+- Deep proficiency in React.js, Next.js, and TypeScript.
+- Experience with state management (Redux Toolkit, Zustand, or TanStack Query).
+- Strong understanding of SSR, ISR, and CSR rendering patterns.
+
+Bonus Points:
+- Experience with WebGL or Three.js.
+- Contribution to open-source UI libraries.

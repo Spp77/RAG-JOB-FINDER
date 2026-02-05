@@ -1,0 +1,28 @@
+Job Title: DevOps Engineer (SRE)
+Company: CloudScale Infra
+Location: London, UK (On-site)
+Salary: £70,000 - £95,000 / year
+
+About Us:
+CloudScale Infra helps enterprises migrate and manage their mission-critical workloads on the public cloud.
+
+Role Overview:
+We need a DevOps Engineer who lives in the terminal. You will be responsible for our client's infrastructure reliability, automation, and security.
+
+Responsibilities:
+- Manage multi-cloud infrastructure (AWS, Azure, GCP) using Terraform (IaC).
+- Build and maintain CI/CD pipelines using GitHub Actions and Jenkins.
+- Monitor system health using Prometheus, Grafana, and ELK Stack.
+- Automate routine tasks using Python and Bash scripting.
+- Implement security best practices (DevSecOps).
+
+Required Skills:
+- 4+ years of experience in DevOps or SRE roles.
+- Expert in Linux administration and Shell scripting.
+- Strong experience with Kubernetes (EKS/AKS) and Helm charts.
+- Proficiency in Terraform and Ansible.
+- Experience with observability tools (Datadog, New Relic).
+
+Certifications:
+- AWS Certified Solutions Architect (Professional) preferred.
+- CKA (Certified Kubernetes Administrator) is a plus.
